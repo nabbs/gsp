@@ -1,0 +1,51 @@
+.button_edit:hover {
+    text-decoration: none;
+    opacity: 0.85
+}
+
+.btn:hover {
+    text-decoration: none !important;
+}
+
+.button_edit i {
+    color: #ffffff;
+    background-color: #1e91cf;
+    border-color: #1978ab;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 2px 11px;
+    font-size: 18px;
+    line-height: 1.42857143;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.button_edit img:hover, button_edit i:hover {
+    background-color: #1872a2;
+    border-color: #115376;
+}
+
+.button_delete {
+    /*margin-left: 10px;*/
+    /*vertical-align: -webkit-baseline-middle;*/
+}
+
+.button_delete i {
+    color: #ffffff;
+    background-color: #f56b6b;
+    border-color: #f24545;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 2px 11px;
+    font-size: 18px;
+    line-height: 1.42857143;
+    border-radius: 3px;
+    vertical-align: middle;
+}
+
+.button_delete:hover {
+    color: #f23b3b;
+    opacity: 0.85
+    /*background-color: #f23b3b;*/
+    /*border-color: #ea1010;*/
+}
