@@ -49,7 +49,7 @@
  * database. Uses database default not specified.
  *
  * sslmode =>
- * For Postgres specifies whether to 'disable', 'allow', 'prefer', or 'require' SSL for the 
+ * For Postgres specifies whether to 'disable', 'allow', 'prefer', or 'require' SSL for the
  * connection. The default value is 'allow'.
  *
  * unix_socket =>
@@ -64,33 +64,34 @@
  * flags =>
  * A key/value array of driver specific connection options.
  */
-class DATABASE_CONFIG {
+class DATABASE_CONFIG
+{
 
-	public $default = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-//		'login' => 'Nick12',
-//		'password' => 'PhotoLand15',
-//		'database' => 'estate',
-//		'login' => 'root',
-//		'password' => 'root',
+    public $default = array(
+        'datasource' => 'Database/Mysql',
+        'persistent' => false,
+        'host'       => 'localhost',
+        //		'login' => 'Nick12',
+        //		'password' => 'PhotoLand15',
         //		'database' => 'estate',
-        'login' => 'gsp_main',
-        'password' => 'gsp2018',
-        'database' => 'gsp_main',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
+        //		'login' => 'root',
+        //		'password' => 'root',
+        //		'database' => 'estate',
+        'login'      => 'gsp_site',
+        'password'   => 'shafqat122',
+        'database'   => 'gsp_main',
+        'prefix'     => '',
+        'encoding'   => 'utf8',
+    );
 
-	public $test = array(
-		'datasource' => 'Database/Mysql',
-		'persistent' => false,
-		'host' => 'localhost',
-		'login' => 'user',
-		'password' => 'password',
-		'database' => 'test_database_name',
-		'prefix' => '',
-		//'encoding' => 'utf8',
-	);
+    public $test = array(
+        'datasource' => 'Database/Mysql',
+        'persistent' => false,
+        'host'       => 'localhost',
+        'login'      => 'user',
+        'password'   => 'password',
+        'database'   => 'test_database_name',
+        'prefix'     => '',
+        //'encoding' => 'utf8',
+    );
 }
