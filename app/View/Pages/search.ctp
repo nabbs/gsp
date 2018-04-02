@@ -12,7 +12,7 @@
                 <? echo $this->Form->create('Filter', array('url' => '/search', 'class' => 'col-md-10 col-md-offset-1')); ?>
                 <div class="form-box pl-15 pr-15">
                     <label for="search_location">Location or postcode</label>
-                    <? echo $this->Form->input('county', array('label' => false, 'type' => 'text', 'div' => false, 'class' => 'amount', 'escape' => 'false', 'required' => 'required')); ?>
+                    <? echo $this->Form->input('county', array('label' => false, 'type' => 'text', 'div' => false, 'class' => 'amount', 'escape' => 'false', 'required' => 'required','value'=>$filter['Filter']['county'])); ?>
                 </div>
                 <div class="form-box mb-40 pl-15 pr-15">
                     <label for="search_min_price">Min price</label>
@@ -228,8 +228,6 @@
                         )); ?>
                     </div>
                 </div>
-                <!--                --><? // echo $this->Form->hidden('order'); ?>
-                <!--                --><? // echo $this->Form->hidden('limit'); ?>
                 <? echo $this->Form->hidden('view'); ?>
 
                 <div class="form-box mb-40 pl-15 pr-15 text-center">

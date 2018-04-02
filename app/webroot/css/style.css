@@ -1,44 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Template Name: DomInno
-    Template URI: http://bootexperts.com
-    Description: This is html5 template
-    Author: BootExperts
-    Author URI: http://bootexperts.com
-    Version: 1.0
-
------------------------------------------------------------------------------------
-    
-    CSS INDEX
-    ===================
-	
-    1.  Find Home Area
-    2.  About Area
-    3.  Service Area
-    4.  Property Area
-    5.  Advertise Area
-	6.  Feature Area
-	7.  Fun Factor Area
-	8.  Team Area
-	9.  Testimonial Area
-	10.  Blog Area
-	11.  Client Area
-	12.  About Page
-	13.  Property Page
-		13.1  Sidebar (Property Page)
-	14.  Property List Page
-	15.  Property Details Page
-	16.  Blog Page Sidebar
-	17.  Blog Details Page
-	18.  Agent Details Page
-	19.  Create Agency Page
-	20.  Single Post Page
-	21.  Contact Page
-	22.  Error Page
-	23.  Modal
-	24.  Additional Page CSS
-	
------------------------------------------------------------------------------------*/
 
 /*----------------------------------------*/
 /*  1.  Find Home Area
@@ -490,7 +449,7 @@ span.text-dark{font-family: "Roboto";}
 /*  10.  Blog Area
 /*----------------------------------------*/
 .blog-image {position: relative;}
-.blog-image a img {width: 100%;}
+.blog-image a img {width: 100%;min-height: 351px;}
 .blog-image span.blog-text {
     bottom: 0;
     color: #fafafa;
@@ -527,6 +486,7 @@ span.text-dark{font-family: "Roboto";}
     text-transform: capitalize;
 }
 .single-blog-text a.button:hover{color: #95c41f;}
+.single-blog-text {height: 331px!important;}
 /*----------------------------------------*/
 /*  11.  Client Area
 /*----------------------------------------*/

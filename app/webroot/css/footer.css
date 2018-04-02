@@ -12,11 +12,12 @@ NOTE: This is Footer style file. All footer related style included in this file.
 }
 .single-footer-widget p {font-size: 14px;}
 .single-footer-widget > span i {font-size: 18px; width: 30px;}
-.footer-list a:hover {color: #95c41f}
+.footer-list a:hover {color: #4cb050}
 .footer-list a {
-	color: #c7c7c7;
-	font-size: 12px;
+	color: #fff;
+	font-size: 14px;
 	line-height: 33px;
+	text-transform: uppercase;
 }
 .footer-logo {margin-top: 15px; text-align: center;}
 .footer-logo img {height: 80px !important;}
@@ -176,4 +177,259 @@ NOTE: This is Footer style file. All footer related style included in this file.
 }
 .single-sidebar-widget .tags li a:hover, .social-links > a:hover, .footer-text a:hover, .header-top-two, .footer-container span a:hover {
 	border-color: #95c41f
+}
+
+/*---------------------------------------
+ 17 Footer                  
+-----------------------------------------*/
+
+.footer {
+    margin-top: 50px;
+    color: #fff;
+    background: url(../img/bg-content-bottom-below.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center center;
+}
+
+.footer-overlay {
+    content: "";
+    background: rgba(34,34,34,0.7);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.subscribe {
+    background: #4cb050;
+    min-height: 100px;
+    color: #fff;
+    text-transform: uppercase;
+    padding-top: 30px;
+    border-radius: 0;
+}
+
+.subscribe .newsletter {
+    margin-left: 0px;
+    padding-top: 15px;
+    padding-left: 15px;
+}
+
+.subscribe  .newsletter span {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.subscribe .subscribe-email {
+    margin-left: -40px;
+    padding-left: 0px;
+}
+
+.subscribe input[type=email] {
+    background: #4cb050;
+    border: 1px solid #fff;
+    width: 510px;
+    height: 50px;
+    padding-left: 30px;
+    color: #fff!important;
+    margin-bottom: 30px;
+}
+
+.subscribe input[type=submit] {
+    background: #3e8f42;
+    border: 1px solid #3e8f42;
+    width: 190px;
+    height: 50px;
+    margin-left: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0;
+    -webkit-transition: .5s ease;
+    transition: .5s ease;
+    color: #fff!important;
+}
+
+.subscribe input[type=submit]:hover {
+    background: #38813C;
+}
+
+.footer-middle {
+    padding: 50px 0 90px 0;
+}
+
+.footer-bottom {
+    background: #000;
+    opacity: 0.9;
+    min-height: 444px;
+}
+
+.footer-bottom h3 {
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+.footer-bottom img {
+    text-align: left;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.footer-bottom .footer-widget {
+    color: #fff;
+    line-height: 30px;
+}
+
+.footer-widget h3 {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    position: relative;
+    color: #fff;
+    font-size: 24px!important;
+    font-weight: normal!important;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+}
+
+.footer-widget h3::after {
+    background: #4cb050;
+    content: "";
+    height: 2px;
+    left: 0;
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+}
+
+.footer-bottom .footer-widget p {
+    text-align: left;
+}
+
+.footer-bottom .footer-widget .twittes {
+    padding-left: 50px;
+    line-height: 20px;
+    font-size: 14px;
+}
+
+.footer-widget p span.twittes a {
+    text-decoration: none;
+    color: #4cb050;
+}
+
+.contact-info p {
+}
+
+.social-widget-links {
+    margin-top: 30px;
+}
+
+.social-widget-links ul li a i {
+    background: #ECECEC;
+    color: #999999;
+    border-radius: 100px;
+    display: inline-block;
+    height: 28px;
+    padding-top: 7px;
+    text-align: center;
+    width: 28px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+}
+
+.social-widget-links ul li a i:hover {
+    color: #fff;
+}
+
+.footer-below {
+    background: #000;
+    padding: 22px 0;
+}
+
+.footer-below .copy-right {
+    padding-top: 5px;
+}
+
+.footer-below .copy-right p {
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+}
+
+.copy-right p a {
+    color: #4cb050;
+}
+
+.footer-below .payment {
+    text-align: right;
+}
+
+.footer-below .payment span {
+    color: #fff;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.footer-below .payment ul {
+    margin-bottom: 0;
+    margin-top: 2px;
+}
+
+.footer-below .payment ul li {
+    font-size: 20px;
+}
+
+.twitter-widget p span.twittes-icon {
+    display: inline-block;
+    width: 15%;
+}
+
+.twitter-widget p span.twittes {
+    display: inline-block;
+    width: 85%;
+    overflow: hidden;
+}
+
+.latest-news p {
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.latest-news p a {
+    color: #fff;
+}
+
+.latest-news p a:hover {
+    color: #4cb050;
+    text-decoration: none;
+}
+
+.latest-news p img {
+    margin-right: 15px;
+    width: 100px;
+}
+
+.latest-news p span {
+    color: #eee;
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    text-transform: none;
+}
+
+.contact-info p span.contact-icon {
+    display: inline-block;
+    width: 15%;
+}
+
+.contact-info p span.contact-details {
+    display: inline-block;
+    width: 85%;
 }

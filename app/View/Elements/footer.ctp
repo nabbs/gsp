@@ -1,102 +1,86 @@
-<div class="footer-widget-area bg-violet black-bg pb-58">
+<footer class="footer">
+  <div class="footer-overlay">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12 mb-30">
-                <div class="footer-logo">
-                    <a href="/"><img src="/app/webroot/img/logo.png" height="65" alt=""></a>
-                </div>
-            </div>
-<!--            <div class="col-md-12">-->
-<!--                <div class="social-links mt-25 mb-80">-->
-<!--                    <a href="#"><i class="fa fa-facebook-f"></i></a>-->
-<!--                    <a href="#"><i class="fab fa-twitter"></i></a>-->
-<!--                    <a href="#"><i class="fa fa-google-plus-g"></i></a>-->
-<!--                </div>-->
-<!--            </div>-->
+      <div class="row subscribe">
+        <form action="http://estate.cake-developer.com/#" id="mc-form" class="mc-form fix">
+          <div class="col-md-5 newsletter"> <span>Subscribe to our newsletter</span> </div>
+          <div class="col-md-5 subscribe-email">
+            <input type="email" placeholder="Email for Newsletter" id="footer_email" name="EMAIL">
+          </div>
+          <div class="col-md-2">            
+            <!-- button id="mc-submit" type="submit"><i class="fas fa-paper-plane"></i></button -->            
+            <input id="mc-submit" type="submit" value="Subscribe">
+          </div>
+        </form>
+        <div class="mailchimp-alerts text-centre fix text-small">
+          <div class="mailchimp-submitting"></div>
+          <div class="mailchimp-success"></div>
+          <div class="mailchimp-error"></div>
         </div>
+      </div>
+      <div class="footer-middle">
         <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <div class="single-footer-widget">
-                    <h3 class="text-white text-uppercase mb-21">About Us</h3>
-                    <p class="pb-19">Lorem must explain to you how all this mistaolt cing pleasure and praising ain
-                        wasnad I will give you a complete pain was prexplain to you lorem</p>
-                    <form action="#" id="mc-form" class="mc-form fix">
-                        <div class="subscribe-form-footer">
-                            <input id="footer_email" type="email" name="EMAIL" placeholder="Email for Newsletter">
-                            <button id="mc-submit" type="submit"><i class="fas fa-paper-plane"></i></button>
-                        </div>
-                    </form>
-                    <!-- mailchimp-alerts Start -->
-                    <div class="mailchimp-alerts text-centre fix text-small">
-                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                        <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                        <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                    </div>
-                    <!-- mailchimp-alerts end -->
-                </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-widget about-us">
+              <h3>About us</h3>
+              <p>Proin sed accumsan justo Morbi nec convallis dui in rhoncus sem Duis nec ipsum sagittis mattis turpis quis, luctus urna Fusce gravida dictum lectus ut interdum.</p>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-4 pl-80 col-xs-12">
-                <div class="single-footer-widget">
-                    <h3 class="text-white text-uppercase mb-28">POPULAR POST</h3>
-                    <div class="footer-widget-content">
-                        <h5 class="mb-8">Duplex Villa Design</h5>
-                        <span class="mb-27 block">Lorem ipsum dolor sit amet, tur<br>acinglit sed do eius </span>
-                    </div>
-                    <p>
-                        <a href="https://www.zoopla.co.uk/" target="_blank">
-                            <img alt="Property information powered by Zoopla" height="54" src="https://www.zoopla.co.uk/static/images/mashery/powered-by-zoopla.png" style="border: 0pt none;" title="Property information powered by Zoopla" width="111">
-                        </a>
-                    </p>
-                </div>
-            </div>
-            <div class="col-lg-3 hidden-md hidden-sm pl-80 col-xs-12">
-                <div class="single-footer-widget">
-                    <h3 class="text-white text-uppercase mb-17">QUICK LINK</h3>
-                    <ul class="footer-list">
-                        <li><a href="/search">Properties</a></li>
-                        <li><a href="/blog">From Blog</a></li>
-                        <? if (!empty($footer_articles)){
-                            foreach ($footer_articles as $article) { ?>
-                                <li><a href="/page/<? echo $article['Article']['url']; ?>"><? echo $article['Article']['title']; ?></a></li>
-                            <? }
+          </div>
+          <div class="col-md-3 col-sm-6">
+            <div class="footer-widget twitter-widget">
+              <h3>Site Links</h3>
+              <ul class="footer-list">
+            <!--li><a href="/search">Properties</a></li>
+            <li><a href="/blog">From Blog</a></li-->
+            <? if (!empty($footer_articles)){
+
+               foreach ($footer_articles as $article) { ?>
+            <li><a href="/page/<? echo $article['Article']['url']; ?>"><? echo $article['Article']['title']; ?></a></li>
+            <? }
+
                         } ?>
-                    </ul>
-                </div>
+          </ul>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                <div class="single-footer-widget pull_right">
-                    <h3 class="text-white text-uppercase mb-21">CONTACT US</h3>
-                    <div class="footer-contact-info mb-24">
-                        <span class="pl-40 block">256, 1st AVE, Manchester<br>
-                                    	125 , Noth England</span>
-                    </div>
-                    <div class="footer-contact-info mb-24">
-                        <span class="pl-40 block">Telephone : +013 445 678 155</span>
-                    </div>
-                    <div class="footer-contact-info">
-<!--                        <img src="images/icons/f-globe.png" alt="">-->
-                        <span class="pl-40 block">Email : info@example.com<br>
-                                    	Web : www.example.com</span>
-                    </div>
-
-                </div>
+          </div>
+          <div class="col-md-3  col-sm-6">
+            <div class="footer-widget latest-news">
+              <h3>From the Blog</h3>
+              <p class="pic1"><img src="../img/post1.png" alt="" class="img-responsive pull-left"> <a href="#">sed do eiusmod tem incididunt ut labore</a> <span>Jan 9, 2017</span></p>
+              <p class="pic2"><img src="../img/post2.png" alt="" class="img-responsive pull-left"> <a href="#">sed do eiusmod tem incididunt ut labore</a> <span>Jan 9, 2017</span></p>
+              <p class="pic3"><img src="../img/post3.png" alt="" class="img-responsive pull-left"> <a href="#">sed do eiusmod tem incididunt ut labore</a> <span>Jan 9, 2017</span></p>
             </div>
+          </div>
+          <!--div class="col-md-3 col-sm-6">
+            <div class="footer-widget contact-info">
+              <h3>Contact Info</h3>
+              <div class="contact-info">
+                <p class="clearfix"> <span class="contact-icon pull-left"><i class="fa fa-map-marker fa-2x"></i></span> <span class="contact-details">777 seventh avenue,Downtown New York,NY 01234</span> </p>
+                <p class="clearfix"> <span class="contact-icon pull-left"><i class="fa fa-envelope fa-2x"></i></span> <span class="contact-details">email@yourdomain.com</span> </p>
+                <p class="clearfix"> <span class="contact-icon pull-left"><i class="fa fa-phone fa-2x"></i></span> <span class="contact-details">0123-456-7890</span> </p>
+                <p class="clearfix"> <span class="contact-icon pull-left"><i class="fa fa-globe fa-2x"></i></span> <span class="contact-details">www.yourwebsite.com</span> </p>
+              </div>
+            </div>
+          </div -->
         </div>
+      </div>
     </div>
-</div>
-
-<footer class="footer-area bg-violet text-center pt-27 pb-32 border-top">
-    <div class="container">
+    <section class="footer-below">
+      <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <div class="footer-text">
-                    <span class="block">Copyright© 2018 <a href="#">GoSearchProperty</a>. All rights reserved.</span>
-                </div>
-            </div>
+          <div class="col-md-6 col-sm-6 copy-right">
+            <p>Copyright © 2018 <a href="http://www.gosearchproperty.com/">GoSearchProperty</a> All rights reserved</p>
+          </div>
+          <div class="col-md-6 col-sm-6 payment">
+            <ul class="list-unstyled list-inline">
+                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+              </ul>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
+  </div>
 </footer>
-
 <script>
     $(document).on('click', '#mc-submit', function (e) {
         e.preventDefault();

@@ -50,13 +50,20 @@
     <div class="form-group col-lg-12">
         <label class="control-label"><? echo __('Record main image'); ?></label>
         <div class="">
-            <? echo $this->Form->input('photo', array('type'=>'file','label' => false, 'div' => false, 'class' => 'form-control', 'id' => 'input_photo', 'placeholder' => __('Image'), 'required' => 'required')); ?>
+            <? echo $this->Form->input('photo', array('type'=>'file','label' => false, 'div' => false, 'class' => 'form-control', 'id' => 'input_photo', 'placeholder' => __('Image'), 'required' => 'false')); ?>
         </div>
     </div>
     <div class="form-group col-lg-12">
         <label class="control-label"><? echo __('Status'); ?></label>
         <div class="">
             <? echo $this->Form->input('active', array('label' => false, 'div' => false, 'class' => 'form-control', 'required' => 'required', 'type' => 'select', 'options' => array('1' => __('Enabled'), '0' => __('Disabled')))); ?>
+        </div>
+    </div>
+      
+    <div class="form-group col-lg-12">
+        <label class="control-label"><? echo __('Date'); ?></label>
+        <div class="">
+            <? echo $this->Form->input('date', array('label' => false, 'div' => false, 'class' => 'form-control', 'id' => 'date', 'placeholder' => __('Date'), 'required' => 'required')); ?>
         </div>
     </div>
     <? echo $this->Form->button(__('<i class="fas fa-save"></i> Save'), array('title' => __('Save'), 'div' => false, 'class' => 'btn btn-primary', 'type' => 'submit', 'escape' => false)); ?>

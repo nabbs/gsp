@@ -430,16 +430,12 @@
                         </div>
                         <div class="single-blog-text">
                             <div class="blog-post-info bg-light-green pl-20 pr-20 pt-17 pb-17">
-                                <span><i class="fa fa-user mr-12"></i>Admin</span>
-<!--                                <span class="pl-35"><i class="fa fa-heart mr-12"></i>15</span>-->
+                                <span><i class="fa fa-user mr-12"></i>Admin</span> <span class="pull-right"><? echo $record['Blog']['date']; ?></span>
 <!--                                <span class="pl-40"><i class="fa fa-comments mr-12"></i>10</span>-->
                             </div>
-                            <h5 class="pt-22 mb-17"><a
-                                        href="/blog/<? echo $record['Blog']['url']; ?>"><? echo $record['Blog']['title']; ?></a>
-                            </h5>
-                            <p class="mb-20">
-                                <? echo $this->Text->truncate($record['Blog']['text'], 200, array('ending' => '', 'exact' => false, 'html' => true)); ?>
-                            </p>
+                            <h5 class="pt-22 mb-17"><a href="/blog/<? echo $record['Blog']['url']; ?>"><? echo $record['Blog']['title']; ?></a></h5>
+                            
+                            <p class="mb-20"><? echo $this->Text->truncate($record['Blog']['text'], 200, array('ending' => '', 'exact' => false, 'html' => true)); ?></p>
                             <a href="/blog/<? echo $record['Blog']['url']; ?>" class="button">Read More</a>
                         </div>
                     </div>

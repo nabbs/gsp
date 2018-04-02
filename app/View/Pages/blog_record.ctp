@@ -9,22 +9,26 @@
                     </div>
                     <div class="single-blog-text">
                         <div class="blog-post-info bg-violet pl-20 pr-20 pt-17 pb-17">
-                            <span class="pr-5"><i class="fa fa-user mr-12"></i>Smith</span>
-                            <span class="pl-60 pr-5"><i class="fa fa-heart mr-12"></i>15</span>
-                            <span class="pl-60"><i class="fa fa-comments mr-12"></i>10</span>
+                            <span class="pr-5"><i class="fa fa-user mr-12"></i>Admin</span>
+                          <span class="pull-right"><? echo $record['Blog']['date']; ?></span>
+                            <!-- span class="pl-60 pr-5"><i class="fa fa-heart mr-12"></i>15</span -->
+                            <!--span class="pl-60"><i class="fa fa-comments mr-12"></i>10</span -->
                         </div>
                         <h5 class="pt-32 mb-22"><? echo $record['Blog']['title']; ?></h5>
                         <p class="mb-27"><? echo $record['Blog']['text']; ?></p>
                     </div>
                 </div>
                 <div class="tags-and-links fix pt-58 pb-12">
-
-                    <div class="social-links-small pull_right">
-                        <span class="mr-20">Share :</span>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-google-plus-g"></i></a>
+                    <div class="pull_right">
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <!--a class="a2a_dd" href="https://www.addtoany.com/share"></a-->
+                    <a class="a2a_button_facebook" title="Share on FaceBook"></a>
+                    <a class="a2a_button_twitter" title="Share on Twitter"></a>
+                    <a class="a2a_button_google_plus" title="Share on Google+"></a>
                     </div>
+                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+                    </div>
+                    
                 </div>
 
             </div>

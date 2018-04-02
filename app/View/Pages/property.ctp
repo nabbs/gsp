@@ -175,7 +175,7 @@
                                     </a>
                                 </div>
                                 <div class="property-title fix pl-18 pr-18 pt-9 pb-9 bg-violet">
-                                    <h3>$52,354</h3>
+                                    <h3>&pound;52,354</h3>
                                 </div>
                             </div>
                         </div>

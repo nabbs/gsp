@@ -7,6 +7,7 @@
         <?php echo $this->fetch('title'); ?>
     </title>
     <link rel="shortcut icon" href="/app/webroot/img/favicon.ico">
+    <link rel="stylesheet" href="/app/webroot/js/fullcalendar/dist/fullcalendar.css" />
     <?php
 
     echo $this->Html->css('bootstrap.min');
@@ -41,9 +42,7 @@
     echo $this->fetch('script');
     ?>
     <script src="/app/webroot/js/jquery-1.12.4.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/app/webroot/js/modernizr-2.8.3.min.js"></script>
     <script src="/app/webroot/js/owl.carousel.min.js"></script>
     <script src="/app/webroot/js/jquery.nivo.slider.js"></script>
@@ -60,12 +59,19 @@
         <script src="/app/webroot/js/Chart.js"></script>
         <script src="/app/webroot/js/jquery-jvectormap-1.2.2.min.js"></script>
         <script src="/app/webroot/js/jquery-jvectormap-world-mill-en.js"></script>
+        <script src="/app/webroot/js/moment/moment.js"></script>
+        <script src="/app/webroot/js/fullcalendar/dist/fullcalendar.min.js"></script>
+        <script src="/app/webroot/js/fullcalendar/dist/locale-all.js"></script>
+        
     <? } else { ?>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <? } ?>
 
 
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
 </head>
 <body <?php if ($this->params['controller'] === 'panel') {
     echo 'class="hold-transition skin-blue sidebar-mini';
@@ -109,7 +115,5 @@
         </div>
     </div>
 <? } ?>
-
-
 </body>
 </html>

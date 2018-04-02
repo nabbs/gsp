@@ -64,6 +64,7 @@ class PanelController extends AppController
         }
         if ($this->request->is('post')) {
             if ($this->Auth->login()) {
+//                $this->Session->write('admin_active',$this->Auth->)
                 $this->redirect($this->referer());
                 //                $this->redirect($this->Auth->redirectUrl());
             } else {
@@ -77,6 +78,14 @@ class PanelController extends AppController
         $this->loadModel('Property');
         $this->loadModel('Newsletter');
         $this->loadModel('Admin');
+        $this->loadModel('Panel');
+
+        $admin_id = $this->Session->read('Auth.Panel.id');
+
+        $admin = $this->Panel->findById($admin_id);
+        if($admin['Panel']['active'] !== true){
+            $this->logout();
+        }
 
         //        $properties = $this->Property->find('all', array('fields' => array('date', 'date'), 'order' => array('id' => 'desc')));
         //        $count = array_count_values($properties);
@@ -601,6 +610,91 @@ class PanelController extends AppController
             //            $this->Session->setFlash(__('Error during blog record deletion'), 'error_message');
         }
         return $this->redirect(array('action' => 'properties'));
+    }
+
+    public function panels()
+    {
+        $this->loadModel('Panel');
+
+        $this->Paginator->settings = array(
+            'limit'      => 10,
+            'order'      => array(
+                'id' => 'desc'
+            ),
+        );
+        $this->set('profiles', $this->Paginator->paginate('Panel'));
+        $this->set('search', isset($this->params['named']['search']) ? $this->params['named']['search'] : "");
+        $this->set('limit', 10);
+    }
+
+    public function panel_add()
+    {
+        $this->loadModel('Panel');
+        if ($this->request->is('post') OR $this->request->is('put')) {
+            $this->Panel->create();
+            if ($this->Panel->save($this->request->data)) {
+//                $this->Session->setFlash(__('Profile information saved!'), 'success_message');
+                $this->redirect(array('controller' => 'panel', 'action' => 'panels'));
+            } else {
+//                $this->Session->setFlash(__('Unable to edit profile!'), 'error_message');
+                $this->redirect(array('controller' => 'panel', 'action' => 'panels'));
+            }
+        }
+    }
+
+    public function panel_edit($id = Null)
+    {
+        $this->loadModel('Panel');
+        if (!$id) {
+            $this->redirect(array('controller' => 'panel', 'action' => 'panels'));
+        }
+
+        $profile = $this->Panel->findById($id);
+        if (empty($profile)) {
+            $this->redirect(array('controller' => 'panel', 'action' => 'panels'));
+        }
+        if ($this->request->is('post') || $this->request->is('put')) {
+            if ($this->request->data['Panel']['change_pass'] != '') {
+                $this->request->data['Panel']['password'] = htmlentities($this->request->data['Panel']['change_pass']);
+                unset($this->request->data['Panel']['change_pass']);
+            }
+
+            $this->Panel->id = $id;
+            if ($this->Panel->save($this->request->data)) {
+//                $this->Session->setFlash(__('Profile information saved!'), 'success_message');
+                $this->redirect(array('controller' => 'panel', 'action' => 'panels'));
+            } else {
+//                $this->Session->setFlash(__('Unable to edit profile!'), 'error_message');
+                $this->redirect(array('controller' => 'panel', 'action' => 'panels'));
+            }
+        }
+
+        if (!$this->request->data) {
+            $this->request->data = $profile;
+        }
+
+        $this->set('profile', $profile);
+    }
+
+    public function panel_delete($id)
+    {
+        $this->loadModel('Panel');
+        if ($this->request->is('get')) {
+            throw new MethodNotAllowedException();
+        }
+        if ($this->Panel->delete($id)) {
+//            $this->Session->setFlash(__('Profile deleted'), 'success_message');
+        } else {
+//            $this->Session->setFlash(__('Error. Profile was not deleted'), 'error_message');
+        }
+        return $this->redirect(array('action' => 'panels'));
+    }
+    
+    public function calendar()
+    {
+        $this->loadModel('Calendar');
+        
+
     }
 
 
