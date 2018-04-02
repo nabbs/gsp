@@ -18,10 +18,10 @@
                         <p class="mb-27"><? echo $record['Blog']['text']; ?></p>
                     </div>
                 </div>
-                <div class="tags-and-links fix pt-58 pb-12">
+                <div class="tags-and-links fix">
                     <div class="pull_right">
                     <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                    <!--a class="a2a_dd" href="https://www.addtoany.com/share"></a-->
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                     <a class="a2a_button_facebook" title="Share on FaceBook"></a>
                     <a class="a2a_button_twitter" title="Share on Twitter"></a>
                     <a class="a2a_button_google_plus" title="Share on Google+"></a>
