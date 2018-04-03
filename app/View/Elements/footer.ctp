@@ -2,7 +2,7 @@
   <div class="footer-overlay">
     <div class="container">
       <div class="row subscribe">
-        <form action="http://estate.cake-developer.com/#" id="mc-form" class="mc-form fix">
+        <form action="#" id="mc-form" class="mc-form fix">
           <div class="col-md-5 newsletter"> <span>Subscribe to our newsletter</span> </div>
           <div class="col-md-5 subscribe-email">
             <input type="email" placeholder="Email for Newsletter" id="footer_email" name="EMAIL">

@@ -1,8 +1,8 @@
-<div class="blog-area pt-70 pb-115 bg-light blog-page">
+<div class="blog-area pt-70 bg-light blog-page">
     <div class="container">
         <div class="row">
             <? foreach ($records as $record) { ?>
-                <div class="col-md-4 mb-55 col-sm-6 fix">
+                <div class="col-md-4 col-sm-6 fix">
                     <div class="single-blog hover-effect-one fix">
                         <div class="blog-image box-hover block">
                             <a href="/blog/<? echo $record['Blog']['url']; ?>" class="block white-hover">
@@ -11,10 +11,11 @@
                             </a>
                         </div>
                         <div class="single-blog-text">
-                            <div class="blog-post-info bg-violet pl-20 pr-20 pt-17 pb-17">
+                            <div class="blog-post-info bg-light-green pl-20 pr-20 pt-17 pb-17">
                                 <span><i class="fa fa-user mr-12"></i>Admin</span>
-                                <span class="pl-35"><i class="fa fa-heart mr-12"></i>15</span>
-                                <span class="pl-40"><i class="fa fa-comments mr-12"></i>10</span>
+                                <!--span class="pl-35"><i class="fa fa-heart mr-12"></i>15</span-->                               
+                                <!--span class="pl-40"><i class="fa fa-comments mr-12"></i>10</span-->
+                                 <span class="pull-right"><? echo $record['Blog']['date']; ?></span>
                             </div>
                             <h5 class="pt-22 mb-17"><a
                                         href="/blog/<? echo $record['Blog']['url']; ?>"><? echo $record['Blog']['title']; ?></a>
