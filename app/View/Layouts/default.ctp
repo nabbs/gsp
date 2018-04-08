@@ -7,7 +7,6 @@
         <?php echo $this->fetch('title'); ?>
     </title>
     <link rel="shortcut icon" href="/app/webroot/img/favicon.ico">
-    <link rel="stylesheet" href="/app/webroot/js/fullcalendar/dist/fullcalendar.css" />
     <?php
 
     echo $this->Html->css('bootstrap.min');
@@ -23,7 +22,7 @@
         echo $this->Html->css('responsive');
         echo $this->Html->css('meanmenu.min');
         echo $this->Html->css('animated-headlines');
-        if ($this->params['action'] === 'home') {
+        if ($this->params['action'] !== 'search') {
             echo $this->Html->css('animate');
             echo $this->Html->css('style2');
         }
@@ -62,7 +61,7 @@
         <script src="/app/webroot/js/moment/moment.js"></script>
         <script src="/app/webroot/js/fullcalendar/dist/fullcalendar.min.js"></script>
         <script src="/app/webroot/js/fullcalendar/dist/locale-all.js"></script>
-        
+        <link rel="stylesheet" href="/app/webroot/js/fullcalendar/dist/fullcalendar.css" />
     <? } else { ?>
     <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -115,5 +114,8 @@
         </div>
     </div>
 <? } ?>
+
+
+<!-- page name: <? echo $this->params['action']?> -->
 </body>
 </html>

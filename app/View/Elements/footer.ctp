@@ -67,13 +67,13 @@
     <section class="footer-below">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-sm-6 copy-right">
+          <div class="col-md-10 col-sm-10 copy-right">
             <p>Copyright © 2018 <a href="http://www.gosearchproperty.com/">GoSearchProperty</a> All rights reserved</p>
           </div>
-          <div class="col-md-6 col-sm-6 payment">
+          <div class="col-md-2 col-sm-2 social-widget-links">
             <ul class="list-unstyled list-inline">
-                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
               </ul>
           </div>
         </div>

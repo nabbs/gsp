@@ -1,5 +1,17 @@
+
+
+<!--div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="section-heading wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Our <span>Blog</span></h1>
+                <p class="section-desc wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis eu magna metus. Donec sed erat non ipsum tincidunt pharetra ipsum tincidunt pharetra
+                </p>
+            </div>
+        </div>
+    </div-->
 <div class="blog-area pt-70 bg-light blog-page">
-    <div class="container">
+    <div class="container">   
         <div class="row">
             <? foreach ($records as $record) { ?>
                 <div class="col-md-4 col-sm-6 fix">

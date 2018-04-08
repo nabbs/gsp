@@ -392,10 +392,8 @@
                         <span class="pull-right">£<? echo $property['Property']['price']; ?></span></div>
                     <div class="description-wrap">
                         <div class="pic-description">
-                            <h3><a href="/property/<? echo $property['Property']['id']; ?>">Property details</a></h3>
-                            <p>
-                                <? echo $this->Text->truncate($property['Property']['short_description'], 90, array('ending' => '', 'exact' => false, 'html' => true)); ?>
-                            </p></div><!-- end .pic-description -->
+                          <h3><a href="/property/<? echo $property['Property']['id']; ?>">Property details</a></h3>
+                          <p><? echo $this->Text->truncate($property['Property']['short_description'], 90, array('ending' => '', 'exact' => false, 'html' => true)); ?></p></div><!-- end .pic-description -->
                         <div class="pic-mesure">
 <!--                            <span><i class="fa fa-object-group"></i> 800 sq ft</span>-->
                             <span><i class="fa fa-bed"></i> <? echo $property['Property']['num_bedrooms']; ?> Bedrooms</span>
@@ -409,7 +407,7 @@
     </div><!-- end .container -->
 </section>
 
-<div class="blog-area pt-70 pb-115 bg-light blog-page">
+<div class="pt-70 bg-light pb-60">
     <div class="container">
 <!--        <h3 class="text-uppercase text-black text-center mb-30">Latest blog records</h3>-->
         <div class="row">
@@ -419,7 +417,7 @@
                 </div>
             </div>
             <? foreach ($blog_records as $record) { ?>
-                <div class="col-md-4 mb-55 col-sm-6 fix wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: fadeIn;">
+                <div class="col-md-4 col-sm-6 fix wow fadeIn" data-wow-duration="1.2s" data-wow-delay="0.2s" style="visibility: visible; animation-duration: 1.2s; animation-delay: 0.2s; animation-name: fadeIn;">
                     <div class="single-blog hover-effect-one fix">
                         <div class="blog-image box-hover block">
                             <a href="/blog/<? echo $record['Blog']['url']; ?>" class="block white-hover">
@@ -444,3 +442,11 @@
         </div>
     </div>
 </div>
+
+<script>
+$('p').each(function() {
+    var $this = $(this);
+    if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+        $this.remove();
+});
+</script>

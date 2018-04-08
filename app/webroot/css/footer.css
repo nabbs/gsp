@@ -8,7 +8,7 @@
 
 
 .footer {
-    margin-top: 50px;
+    /*margin-top: 50px;*/
     color: #fff;
     background: url(../img/bg-content-bottom-below.jpg);
     background-attachment: fixed;
@@ -150,7 +150,7 @@
 }
 
 .social-widget-links {
-    margin-top: 30px;
+    /*margin-top: 30px;*/
 }
 
 .social-widget-links ul li a i {
