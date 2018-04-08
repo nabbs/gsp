@@ -8,7 +8,7 @@
 <!--                        <span class="blog-text block bg-lemon pt-6">10 <span class="block pt-2 ">OCT</span></span>-->
                     </div>
                     <div class="single-blog-text">
-                        <div class="blog-post-info bg-violet pl-20 pr-20 pt-17 pb-17">
+                        <div class="blog-post-info bg-light-green pl-20 pr-20 pt-17 pb-17">
                             <span class="pr-5"><i class="fa fa-user mr-12"></i>Admin</span>
                           <span class="pull-right"><? echo $record['Blog']['date']; ?></span>
                             <!-- span class="pl-60 pr-5"><i class="fa fa-heart mr-12"></i>15</span -->
@@ -30,7 +30,6 @@
                     </div>
                     
                 </div>
-
             </div>
             <div class="col-lg-3 col-md-4 pl-35">
                 <div class="single-sidebar-widget fix mb-60">
@@ -67,6 +66,8 @@
                 </div>
 
             </div>
+            
+            
         </div>
     </div>
 </div>
