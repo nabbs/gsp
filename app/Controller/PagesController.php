@@ -101,6 +101,9 @@ class PagesController extends AppController
         //            //                $results = $HttpSocket->get('https://api.zoopla.co.uk/api/v1/property_listings.json?country=England&page_size=50&page_number=' . $i . '&order_by=last_published_date&api_key=vh24sddv5gj6vjb434jh2fsf&');
         //            //            $results = $HttpSocket->get('https://api.zoopla.co.uk/api/v1/property_listings.xml?country=England&page_size=100&page_number=' . $i . '&order_by=last_published_date&ordering=ascending&api_key=vh24sddv5gj6vjb434jh2fsf&');
         $request = Requests::get('https://api.zoopla.co.uk/api/v1/property_listings.xml?country=England&page_size=100&page_number=' . $i . '&order_by=last_published_date&ordering=ascending&api_key=vh24sddv5gj6vjb434jh2fsf&');
+        
+        //use new key: q5srkrjgwf53zszh8r695wyk
+        
         //            //            var_dump($request);
         $results = Xml::toArray(Xml::build($request->body));
         var_dump($results);
@@ -302,8 +305,8 @@ class PagesController extends AppController
     {
         $this->loadModel('Article');
 
-        $this->set('header_articles', $this->Article->find('all', array('conditions' => array('type' => array('header', 'both')), 'order' => array('id' => 'asc'))));
-        $this->set('footer_articles', $this->Article->find('all', array('conditions' => array('type' => array('footer', 'both')), 'order' => array('id' => 'asc'))));
+        $this->set('header_articles', $this->Article->find('all', array('conditions' => array('type' => array('header', 'both'), 'active' => 1), 'order' => array('id' => 'asc'))));
+        $this->set('footer_articles', $this->Article->find('all', array('conditions' => array('type' => array('footer', 'both'), 'active' => 1), 'order' => array('id' => 'asc'))));
     }
 
     public function search()
