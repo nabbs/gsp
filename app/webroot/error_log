@@ -188,3 +188,11 @@ Stack trace:
 #1 /home/gsp/public_html/app/webroot/index.php(102): include('/home/gsp/publi...')
 #2 {main}
   thrown in /home/gsp/public_html/lib/Cake/Core/Configure.php on line 165
+[02-Apr-2018 19:16:24 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/gsp/public_html/app/View/Elements/header.ctp on line 17
+[02-Apr-2018 19:16:24 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[02-Apr-2018 19:16:24 UTC] PHP Parse error:  syntax error, unexpected 'foreach' (T_FOREACH) in /home/gsp/public_html/app/View/Elements/header.ctp on line 17
+[02-Apr-2018 19:16:24 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-Apr-2018 19:46:20 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gsp/public_html/app/View/Layouts/default.ctp on line 25
+[04-Apr-2018 19:46:20 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[04-Apr-2018 19:46:20 UTC] PHP Parse error:  syntax error, unexpected '=' in /home/gsp/public_html/app/View/Layouts/default.ctp on line 25
+[04-Apr-2018 19:46:20 UTC] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
